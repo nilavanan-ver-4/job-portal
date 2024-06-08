@@ -1,0 +1,63 @@
+/* joblistings.css */
+
+.job-listings {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .job-listings h1 {
+    color: #1160f3; /* Dark gray text color */
+    font-size: 24px;
+    margin-bottom: 20px;
+    position: static;
+    font-style: bold;
+    font-family:Arial, Helvetica, sans-serif ;
+    text-align: center;
+  }
+  
+  .job-item {
+    background-color: #f9f9f9; /* Light gray background color */
+    border-radius: 5px;
+    display:flex;
+    height: 100px;
+    
+    padding: 15px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .job-item:hover {
+    background: linear-gradient(rgb(174, 227, 231),rgb(189, 216, 189));
+    background-color: #e9f1fb; /* Light blue background color on hover */
+  }
+  
+  .job-link {
+    text-decoration: none;
+    color: #333; /* Dark gray text color */
+    display: block;
+  }
+  
+  .job-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: rgb(241, 20, 241);
+  }
+  
+  .job-company {
+    font-style: italic;
+    margin-bottom: 5px;
+  }
+  
+  .job-location {
+    color: #666; /* Medium gray text color for location */
+    margin-bottom: 5px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  /* Add more styles as needed */
+  

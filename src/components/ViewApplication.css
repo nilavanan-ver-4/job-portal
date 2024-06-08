@@ -1,0 +1,38 @@
+/* src/components/ViewApplications.css */
+
+.view-applications {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .applications-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .application-item {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    background-color: #fff;
+  }
+  
+  .applicant-name {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .job-title {
+    color: #555;
+    margin-top: 5px;
+  }
+  
