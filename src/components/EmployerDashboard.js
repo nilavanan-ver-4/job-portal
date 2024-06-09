@@ -10,12 +10,19 @@ const EmployerDashboard = () => {
       <header className="header">
         <h1>Employer Dashboard</h1>
       </header>
-      <nav className="navigation">
-        <ul>
-          <li><Link to="/post-job" className="nav-link">Post a Job</Link></li>
-          <li><Link to="/view-applications" className="nav-link">View Applications</Link></li>
-        </ul>
-      </nav>
+     
+      <main className="dashboard-content">
+        <section className="info-card">
+          <h2>Post a Job</h2>
+          <p>Reach out to a wide audience by posting your job listings here.</p>
+          <Link to="/post-job" className="cta-button">Get Started</Link>
+        </section>
+        <section className="info-card">
+          <h2>View Applications</h2>
+          <p>Manage and review the applications submitted by candidates.</p>
+          <Link to="/view-applications" className="cta-button">View Now</Link>
+        </section>
+      </main>
     </div>
   );
 };

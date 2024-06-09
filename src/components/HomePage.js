@@ -1,4 +1,4 @@
-// HomePage.js
+// src/components/HomePage.js
 
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -7,17 +7,54 @@ import './HomePage.css'; // Import the CSS file
 const HomePage = () => {
   return (
     <div className="container">
-      <h1>Welcome to the Job Portal</h1>
+      <header>
+        <h1>Welcome to the Job Portal</h1>
+      </header>
       <nav>
-        <ul>
-          <li><Link to="/jobs">Job Listings</Link></li>
-          <li><Link to="/employer-dashboard">Employer Dashboard</Link></li>
-          <li><Link to="/candidate-dashboard">Candidate Dashboard</Link></li>
-          
-        </ul>
-      </nav>
+          <ul>
+            <li><Link to="/jobs">Job Listings</Link></li>
+            <li><Link to="/employer-dashboard">Employer Dashboard</Link></li>
+            <li><Link to="/candidate-dashboard">Candidate Dashboard</Link></li>
+          </ul>
+        </nav>
+        <br>
+        </br>
+      <main>
+        <section className="search-bar">
+          <form action="#">
+            <label htmlFor="skills"><b>Skills / Designations / Companies</b></label>
+            <input type="text" id="skills" name="skills" />
+            <label htmlFor="experience"><b>Experience</b></label>
+            <select id="experience" name="experience">
+              <option value="">Select</option>
+              <option value="entry_level">Entry Level</option>
+              <option value="mid_level">Mid Level</option>
+              <option value="senior_level">Senior Level</option>
+            </select>
+            <label htmlFor="location"><b>Location</b></label>
+            <input type="text" id="location" name="location" />
+            <button type="submit">Search</button>
+          </form>
+        </section>
+        <section className="about-us">
+          <h2>Introducing nila jobdoor</h2>
+          <p>Discover powerful tools & tips that help you prepare for every stage of your career.</p>
+          <a href="#">Start exploring</a>
+        </section>
+        <section className="job-categories">
+          <h2>Job Categories</h2>
+          <ul>
+            <li><a href="#">Remote</a></li>
+            <li><a href="#">MNC</a></li>
+            <li><a href="#">Analytics</a></li>
+            <li><a href="#">Sales</a></li>
+          </ul>
+        </section>
+        
+      </main>
     </div>
   );
 };
 
 export default HomePage;
+
