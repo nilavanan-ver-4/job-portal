@@ -86,23 +86,25 @@ Make sure you have the following software installed on your machine:
 
 The project structure is as follows:
 
+```plaintext
 job-portal/
 ├── public/
 ├── src/
-│ ├── components/
-│ │ ├── HomePage.js
-│ │ ├── EmployerDashboard.js
-│ │ ├── CandidateDashboard.js
-│ │ ├── JobDetail.js
-│ │ ├── JobApplicationProcess.js
-│ │ └── ...
-│ ├── App.js
-│ ├── index.js
-│ └── ...
+│   ├── components/
+│   │   ├── HomePage.js
+│   │   ├── EmployerDashboard.js
+│   │   ├── CandidateDashboard.js
+│   │   ├── JobDetail.js
+│   │   ├── JobApplicationProcess.js
+│   │   └── ...
+│   ├── App.js
+│   ├── index.js
+│   └── ...
 ├── .env
 ├── package.json
 ├── server.js
 └── README.md
+```
 
 
 ## Tools and Applications Used
