@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import './EmployerDashboard.css';
+import { Link } from 'react-router-dom';
 
 const JobDetail = () => {
   const { jobId } = useParams();
@@ -22,7 +24,15 @@ const JobDetail = () => {
       <p><strong>Location:</strong> {job.formattedAddress}</p>
       <p><strong>Skills:</strong> {job.skills.join(', ')}</p>
       {/* Add more job details as needed */}
+      <div className="job-detail">
+      {/* Job details content */}
+      <Link to="/apply-job" className="apply-button">Apply for this job</Link>
+      <style>
+        
+      </style>
     </div>
+    </div>
+    
   );
 };
 

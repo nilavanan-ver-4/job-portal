@@ -3,8 +3,37 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './HomePage.css'; // Import the CSS file
+import { useState } from 'react';
 
 const HomePage = () => {
+  const [email, setEmail] = useState('');
+
+  const handleChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Send the email address to your backend server or API
+    fetch('/subscribe', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email }),
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Success:', data);
+        // Handle successful subscription, e.g., display a success message
+        alert('Subscribed successfully!');
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+        // Handle errors, e.g., display an error message
+        alert('Subscription failed. Please try again.');
+      });
+  };
   return (
     <div className="container">
       <header>
@@ -50,6 +79,16 @@ const HomePage = () => {
             <li><a href="#">Sales</a></li>
           </ul>
         </section>
+        <div className="email-subscription">
+        <h2>Subscribe to Email Notifications</h2>
+        <form onSubmit={handleSubmit}>
+          <label>
+            Email:
+            <input type="email" value={email} onChange={handleChange} required />
+          </label>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
         
       </main>
     </div>
